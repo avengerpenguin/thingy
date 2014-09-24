@@ -1,0 +1,5 @@
+/celerybeat-schedule
+*~
+*.deb
+*.pyc
+/venv

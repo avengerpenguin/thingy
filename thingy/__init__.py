@@ -8,10 +8,11 @@ from FuXi.Horn.HornRules import HornFromN3
 import datetime
 from celery import Celery
 import logging
+import os
 
 
 app = Flask(__name__)
-app.config['MONGO_PORT'] = 5001
+app.config['MONGO_PORT'] = 27017
 app.config['DEBUG'] = True
 mongo = PyMongo(app)
 
@@ -27,10 +28,10 @@ celery.conf.CELERYBEAT_SCHEDULE = {
         'schedule': datetime.timedelta(hours=1),
     },
 }
-celery.conf.BROKER_URL = 'mongodb://localhost:5001/thingy'
+celery.conf.BROKER_URL = 'mongodb://localhost:27017/thingy'
 
 rule_store, rule_graph, network = SetupRuleStore(makeNetwork=True)
-rules = HornFromN3('rules.n3')
+rules = HornFromN3(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'rules.n3'))
 
 
 @app.route('/')
