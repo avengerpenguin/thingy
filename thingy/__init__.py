@@ -86,7 +86,7 @@ def update_thing(iri):
 @celery.task
 def update_all():
     logging.info('Checking for old things to update...')
-    stale_date = datetime.datetime.utcnow() - datetime.timedelta(days=1)
+    stale_date = datetime.datetime.utcnow() - datetime.timedelta(hours=1)
     for entry in mongo.db.things.find({'updated': {'$lt': stale_date}}):
         logging.info('Found stale: %s', entry['_id'])
         update_thing(entry['_id'])
