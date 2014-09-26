@@ -6,4 +6,4 @@ pymongo==2.7.2
 rdflib==4.1.2
 flask-rdf==0.1.6
 celery==3.1.15
-git+git://github.com/avengerpenguin/FuXi.git#egg=FuXi
+-e git+git://github.com/avengerpenguin/FuXi.git#egg=FuXi
