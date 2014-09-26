@@ -12,7 +12,7 @@ import os
 
 
 app = Flask(__name__)
-app.config['MONGO_PORT'] = 27017
+app.config['MONGO_URI'] = os.getenv('MONGOLAB_URI')
 app.config['DEBUG'] = True
 mongo = PyMongo(app)
 
