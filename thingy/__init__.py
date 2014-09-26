@@ -29,8 +29,7 @@ celery.conf.CELERYBEAT_SCHEDULE = {
     },
 }
 
-celery.conf.BROKER_URL = os.getenv(
-    'MONGOLAB_URI', 'mongodb://localhost:27017/thingy')
+celery.conf.BROKER_URL = os.getenv('MONGOLAB_URI')
 
 rule_store, rule_graph, network = SetupRuleStore(makeNetwork=True)
 rules = HornFromN3(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'rules.n3'))
