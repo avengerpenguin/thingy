@@ -9,8 +9,7 @@ clean:
 	rm -rf ${VENV} celerybeat-schedule celerybeat.pid ${ORG}-${NAME}_*.deb
 
 venv:
-	virtualenv ${VENV}
-	${PIP} install 'git+git://github.com/avengerpenguin/FuXi.git#egg=FuXi'
+	virtualenv --python python3 ${VENV}
 	${PIP} install -r requirements.txt
 
 
