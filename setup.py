@@ -25,3 +25,4 @@ setup(name='thingy',
         'flask-rdf'
         ],
       )
+
