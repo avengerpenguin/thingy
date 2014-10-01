@@ -32,7 +32,8 @@ celery.conf.CELERYBEAT_SCHEDULE = {
 celery.conf.BROKER_URL = os.getenv('MONGOLAB_URI')
 
 rule_store, rule_graph, network = SetupRuleStore(makeNetwork=True)
-rules = HornFromN3(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'rules.n3'))
+rules = HornFromN3(os.path.join(
+    os.path.dirname(os.path.realpath(__file__)), 'rules.n3'))
 
 
 @app.route('/')
@@ -57,7 +58,7 @@ def find_uri():
     return graph
 
 
-def infer_schema(graph):
+def infer_schema(graph, rules, network):
     closure_delta = Graph()
     network.inferredFacts = closure_delta
     for rule in rules:
@@ -74,7 +75,7 @@ def update_thing(iri):
     raw_graph = Graph()
     raw_graph.parse(iri)
 
-    graph = infer_schema(raw_graph)
+    graph = infer_schema(raw_graph, rules, network)
 
     rdf_string = graph.serialize(format='turtle').decode('utf-8')
     mongo.db.things.insert({
