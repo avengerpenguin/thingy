@@ -8,13 +8,19 @@ PIP=${VENV}/bin/pip
 clean:
 	rm -rf ${VENV} celerybeat-schedule celerybeat.pid ${ORG}-${NAME}_*.deb
 
+
 venv:
 	virtualenv --python python3 ${VENV}
 	${PIP} install -r requirements.txt
 
 
+test:
+	${VENV}/bin/honcho --procfile Procfile.test --env .env.test start
+
+
 run: venv
 	${VENV}/bin/honcho start
+
 
 deb: venv
 	virtualenv ${VENV}-tools

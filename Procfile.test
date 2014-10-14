@@ -1,0 +1,2 @@
+web: gunicorn thingy:app --log-file=-
+worker: py.test -vv tests
