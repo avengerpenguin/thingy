@@ -6,7 +6,7 @@ PIP=${VENV}/bin/pip
 
 
 clean:
-	rm -rf ${VENV} celerybeat-schedule celerybeat.pid ${ORG}-${NAME}_*.deb
+	rm -rf ${VENV} ${VENV}-tools celerybeat-schedule celerybeat.pid ${ORG}-${NAME}_*.deb
 
 
 venv:
@@ -14,7 +14,7 @@ venv:
 	${PIP} install -r requirements.txt
 
 
-test:
+test: venv
 	${VENV}/bin/honcho --procfile Procfile.test --env .env.test start
 
 
