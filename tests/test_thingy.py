@@ -1,6 +1,9 @@
 import hyperspace
-from rdflib import URIRef, Literal
+from rdflib import URIRef, Literal, Namespace
 import pytest
+
+SCHEMA = Namespace(URIRef('http://schema.org/'))
+KEVIN_BACON = URIRef('http://dbpedia.org/resource/Kevin_Bacon')
 
 
 @pytest.fixture
@@ -19,7 +22,7 @@ def test_name(thingy_home):
         {'iri': 'http://dbpedia.org/resource/Kevin_Bacon'}).submit().data
 
     assert (
-        URIRef('http://dbpedia.org/resource/Kevin_Bacon'),
-        URIRef('http://schema.org/name'),
+        KEVIN_BACON,
+        SCHEMA.name,
         Literal('Kevin Bacon', lang='en')
     ) in graph
