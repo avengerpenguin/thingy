@@ -36,20 +36,18 @@ def kevin_bacon(kevin_bacon_graph):
 
 
 def test_name(kevin_bacon):
-    assert (KEVIN_BACON, SCHEMA.name, english('Kevin Bacon')) in kevin_bacon
+    assert 'Kevin Bacon' in set(kevin_bacon.schema_name)
 
 
 def test_description(kevin_bacon):
-    descriptions = kevin_bacon.objects(KEVIN_BACON, SCHEMA.description)
-
-    english_description = [
-        description for description in descriptions
-        if description.language == 'en'
-    ][0].toPython()
-
-    assert 'Kevin Norwood Bacon' in english_description
+    descriptions = kevin_bacon.schema_description
+    # Make a big soup of all the descriptions for now
+    # TODO: Laconia needs to make it easier to work with languages
+    assert 'Kevin Norwood Bacon' in ''.join(set(descriptions))
 
 
 def test_thumbnail(kevin_bacon):
-    kevin_bacon = laconia.ThingFactory(kevin_bacon)('http://dbpedia.org/resource/Kevin_Bacon')
-
+    expected_url = 'http://commons.wikimedia.org/wiki/Special:FilePath/Kevin_' \
+                   'Bacon_Comic-Con_2012.jpg?width=300'
+    first_thumbnail_found = str(list(kevin_bacon.schema_thumbnailUrl)[0])
+    assert expected_url == first_thumbnail_found
