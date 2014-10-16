@@ -1,6 +1,8 @@
 import hyperspace
 from rdflib import URIRef, Literal, Namespace
 import pytest
+import laconia
+
 
 SCHEMA = Namespace(URIRef('http://schema.org/'))
 KEVIN_BACON = URIRef('http://dbpedia.org/resource/Kevin_Bacon')
@@ -22,9 +24,15 @@ def thingy_home(home_url):
 
 
 @pytest.fixture
-def kevin_bacon(thingy_home):
+def kevin_bacon_graph(thingy_home):
     return thingy_home.queries['lookup'][0].build(
         {'iri': 'http://dbpedia.org/resource/Kevin_Bacon'}).submit().data
+
+
+@pytest.fixture
+def kevin_bacon(kevin_bacon_graph):
+    factory = laconia.ThingFactory(kevin_bacon_graph)
+    return factory('http://dbpedia.org/resource/Kevin_Bacon')
 
 
 def test_name(kevin_bacon):
@@ -41,4 +49,7 @@ def test_description(kevin_bacon):
 
     assert 'Kevin Norwood Bacon' in english_description
 
+
+def test_thumbnail(kevin_bacon):
+    kevin_bacon = laconia.ThingFactory(kevin_bacon)('http://dbpedia.org/resource/Kevin_Bacon')
 
