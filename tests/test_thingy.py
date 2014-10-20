@@ -14,7 +14,7 @@ def english(string):
 
 @pytest.fixture
 def home_url():
-    return 'http://localhost:5000'
+    return 'http://localhost:5100'
 
 
 @pytest.fixture
