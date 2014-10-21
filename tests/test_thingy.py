@@ -8,10 +8,6 @@ SCHEMA = Namespace(URIRef('http://schema.org/'))
 KEVIN_BACON = URIRef('http://dbpedia.org/resource/Kevin_Bacon')
 
 
-def english(string):
-    return Literal(string, lang='en')
-
-
 @pytest.fixture
 def home_url():
     return 'http://localhost:5100'
@@ -40,10 +36,8 @@ def test_name(kevin_bacon):
 
 
 def test_description(kevin_bacon):
-    descriptions = kevin_bacon.schema_description
-    # Make a big soup of all the descriptions for now
-    # TODO: Laconia needs to make it easier to work with languages
-    assert 'Kevin Norwood Bacon' in ''.join(set(descriptions))
+    kevin_bacon.lang = 'en'
+    assert 'Kevin Norwood Bacon' in list(kevin_bacon.schema_description)[0]
 
 
 def test_thumbnail(kevin_bacon):

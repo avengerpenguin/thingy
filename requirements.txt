@@ -11,3 +11,4 @@ pytest==2.6.3
 pytest-cov==1.8.0
 -e git+git://github.com/avengerpenguin/hyperspace#egg=hyperspace
 testypie==0.2.2
+laconia==0.2.1
