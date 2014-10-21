@@ -45,3 +45,9 @@ def test_thumbnail(kevin_bacon):
                    'Bacon_Comic-Con_2012.jpg?width=300'
     first_thumbnail_found = str(list(kevin_bacon.schema_thumbnailUrl)[0])
     assert expected_url == first_thumbnail_found
+
+
+def test_image(kevin_bacon):
+    expected_url = 'foobar'
+    first_image_found = str(list(kevin_bacon.schema_image)[0])
+    assert expected_url == first_image_found
