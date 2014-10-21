@@ -12,7 +12,7 @@ import os
 
 
 app = Flask(__name__)
-app.config['MONGO_URI'] = os.getenv('MONGOLAB_URI')
+app.config['MONGO_URI'] = os.getenv('MONGO_URI')
 app.config['DEBUG'] = True
 mongo = PyMongo(app)
 
@@ -29,7 +29,7 @@ celery.conf.CELERYBEAT_SCHEDULE = {
     },
 }
 
-celery.conf.BROKER_URL = os.getenv('MONGOLAB_URI')
+celery.conf.BROKER_URL = os.getenv('MONGO_URI')
 
 rule_store, rule_graph, network = SetupRuleStore(makeNetwork=True)
 rules = HornFromN3(os.path.join(

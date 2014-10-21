@@ -1,7 +1,9 @@
+import os
 import hyperspace
 from rdflib import URIRef, Literal, Namespace
 import pytest
 import laconia
+import pymongo
 
 
 SCHEMA = Namespace(URIRef('http://schema.org/'))
@@ -31,6 +33,14 @@ def kevin_bacon(kevin_bacon_graph):
     return factory('http://dbpedia.org/resource/Kevin_Bacon')
 
 
+@pytest.fixture(autouse=True)
+def clear_mongo():
+    client = pymongo.MongoClient(os.getenv('MONGO_URI'))
+    db = client.thingy
+    db.things.remove()
+    assert db.things.count() == 0
+
+
 def test_name(kevin_bacon):
     assert 'Kevin Bacon' in set(kevin_bacon.schema_name)
 
@@ -48,6 +58,7 @@ def test_thumbnail(kevin_bacon):
 
 
 def test_image(kevin_bacon):
-    expected_url = 'foobar'
+    expected_url = 'http://commons.wikimedia.org/wiki/Special:FilePath/Kevin_' \
+                   'Bacon_Comic-Con_2012.jpg'
     first_image_found = str(list(kevin_bacon.schema_image)[0])
     assert expected_url == first_image_found

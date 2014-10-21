@@ -6,9 +6,9 @@ pymongo==2.7.2
 rdflib==4.1.2
 flask-rdf==0.1.6
 celery==3.1.15
--e git+git://github.com/avengerpenguin/FuXi.git#egg=FuXi
+-e git+https://github.com/avengerpenguin/FuXi.git#egg=FuXi
 pytest==2.6.3
 pytest-cov==1.8.0
--e git+git://github.com/avengerpenguin/hyperspace#egg=hyperspace
-testypie==0.2.2
+-e git+https://github.com/avengerpenguin/hyperspace#egg=hyperspace
+testypie==0.3.0
 laconia==0.2.1

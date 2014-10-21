@@ -4,6 +4,8 @@ VENV=venv
 INSTALLDIR=/opt/${ORG}/${NAME}
 PIP=${VENV}/bin/pip
 
+export PATH := ${VENV}/bin:$(PATH)
+
 
 clean:
 	rm -rf ${VENV} ${VENV}-tools celerybeat-schedule celerybeat.pid ${ORG}-${NAME}_*.deb
