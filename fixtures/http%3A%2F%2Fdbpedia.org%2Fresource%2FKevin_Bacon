@@ -1,0 +1,8 @@
+{
+    "body": "",
+    "headers": {
+        "Location": "http://dbpedia.org/data/Kevin_Bacon.xml",
+        "Content-Type": "application/rdf+xml; qs=0.95"
+    },
+    "code": 303
+}
