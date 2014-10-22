@@ -62,3 +62,9 @@ def test_image(kevin_bacon):
                    'Bacon_Comic-Con_2012.jpg'
     first_image_found = str(list(kevin_bacon.schema_image)[0])
     assert expected_url == first_image_found
+
+
+def test_starring(kevin_bacon_graph, kevin_bacon):
+    factory = laconia.ThingFactory(kevin_bacon_graph)
+    apollo13 = factory('http://dbpedia.org/resource/Apollo_13_(film)')
+    assert apollo13 in kevin_bacon.schema_actor_of
