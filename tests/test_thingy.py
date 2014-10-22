@@ -10,27 +10,22 @@ SCHEMA = Namespace(URIRef('http://schema.org/'))
 KEVIN_BACON = URIRef('http://dbpedia.org/resource/Kevin_Bacon')
 
 
-@pytest.fixture
-def home_url():
-    return 'http://localhost:5100'
-
-
-@pytest.fixture
-def thingy_home(home_url):
+def url2entity(url):
     hyperspace.session.headers['Accept'] = 'text/turtle'
-    return hyperspace.jump(home_url)
+    thingy_home = hyperspace.jump('http://localhost:5100')
+    graph = thingy_home.queries['lookup'][0].build({'iri': url}).submit().data
+    factory = laconia.ThingFactory(graph)
+    return factory(url)
 
 
 @pytest.fixture
-def kevin_bacon_graph(thingy_home):
-    return thingy_home.queries['lookup'][0].build(
-        {'iri': 'http://dbpedia.org/resource/Kevin_Bacon'}).submit().data
+def kevin_bacon():
+    return url2entity('http://dbpedia.org/resource/Kevin_Bacon')
 
 
 @pytest.fixture
-def kevin_bacon(kevin_bacon_graph):
-    factory = laconia.ThingFactory(kevin_bacon_graph)
-    return factory('http://dbpedia.org/resource/Kevin_Bacon')
+def apollo13():
+    return url2entity('http://dbpedia.org/resource/Apollo_13_(film)')
 
 
 @pytest.fixture(autouse=True)
@@ -64,7 +59,6 @@ def test_image(kevin_bacon):
     assert expected_url == first_image_found
 
 
-def test_starring(kevin_bacon_graph, kevin_bacon):
-    factory = laconia.ThingFactory(kevin_bacon_graph)
-    apollo13 = factory('http://dbpedia.org/resource/Apollo_13_(film)')
+def test_starring(kevin_bacon, apollo13):
     assert apollo13 in kevin_bacon.schema_actor_of
+    assert kevin_bacon in apollo13.schema_actor

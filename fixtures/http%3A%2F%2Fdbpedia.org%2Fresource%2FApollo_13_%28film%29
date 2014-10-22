@@ -1,0 +1,8 @@
+{
+    "code": 303,
+    "body": "",
+    "headers": {
+        "Location": "http://dbpedia.org/data/Apollo_13_(film).xml",
+        "Content-Type": "application/rdf+xml; qs=0.95"
+    }
+}
