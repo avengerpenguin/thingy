@@ -9,7 +9,7 @@ import datetime
 from celery import Celery
 import logging
 import os
-
+from httplib2 import iri2uri
 
 app = Flask(__name__)
 app.config['MONGO_URI'] = os.getenv('MONGO_URI')
@@ -73,7 +73,7 @@ def update_thing(iri):
     logging.info('Adding/updating: %s', iri)
 
     raw_graph = Graph()
-    raw_graph.parse(iri)
+    raw_graph.parse(iri2uri(iri))
 
     graph = infer_schema(raw_graph, rules, network)
 
