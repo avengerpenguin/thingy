@@ -11,6 +11,7 @@ import logging
 import os
 from httplib2 import iri2uri
 
+
 app = Flask(__name__)
 app.config['MONGO_URI'] = os.getenv('MONGO_URI')
 app.config['DEBUG'] = True
