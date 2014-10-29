@@ -2,7 +2,7 @@
     "code": 303,
     "body": "",
     "headers": {
-        "Location": "http://dbpedia.org/data/Kevin_Bacon.xml",
+        "Location": "http://dbpedia.org/data/A_Few_Good_Men.xml",
         "Content-Type": "application/rdf+xml; qs=0.95"
     }
 }

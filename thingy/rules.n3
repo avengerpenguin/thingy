@@ -5,8 +5,11 @@
 
 
 { ?x rdfs:label            ?y } => { ?x schema:name         ?y } .
+
 { ?x rdfs:comment          ?y } => { ?x schema:description  ?y } .
+
 { ?x dbpedia-owl:thumbnail ?y } => { ?x schema:thumbnailUrl ?y } .
 { ?x foaf:depiction        ?y } => { ?x schema:image        ?y } .
+
 
 { ?work dbpedia-owl:starring  ?actor } => { ?work schema:actor ?actor } .

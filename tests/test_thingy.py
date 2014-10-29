@@ -28,6 +28,11 @@ def apollo13():
     return url2entity('http://dbpedia.org/resource/Apollo_13_(film)')
 
 
+@pytest.fixture
+def question_time():
+    return url2entity('http://www.bbc.co.uk/programmes/b006t1q9')
+
+
 @pytest.fixture(autouse=True)
 def clear_mongo():
     client = pymongo.MongoClient(os.getenv('MONGO_URI'))
@@ -62,3 +67,11 @@ def test_image(kevin_bacon):
 def test_starring(kevin_bacon, apollo13):
     assert apollo13 in kevin_bacon.schema_actor_of
     assert kevin_bacon in apollo13.schema_actor
+
+
+#def test_name_of_linked_item_accessible(kevin_bacon):
+#    assert 'Apollo 13 (Film)' in sum([list(film.schema_name) for film in kevin_bacon.schema_actor_of], [])
+
+def test_schema_org_properties_passed_through(question_time):
+    print(question_time._id, question_time._store.serialize(format='turtle').decode('utf-8'))
+    assert 'Question Time' in set(question_time.schema_name)

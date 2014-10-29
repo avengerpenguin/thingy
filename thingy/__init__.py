@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from flask.ext.pymongo import PyMongo
+import hyperspace
 from rdflib import Graph, URIRef, Namespace
 from flask_rdf import flask_rdf
 from FuXi.Rete.RuleStore import SetupRuleStore
@@ -10,6 +11,7 @@ from celery import Celery
 import logging
 import os
 from httplib2 import iri2uri
+import requests
 
 
 app = Flask(__name__)
@@ -67,16 +69,39 @@ def infer_schema(graph, rules, network):
 
     network.feedFactsToAdd(generateTokenSet(graph))
     closure_delta.bind('schema', Namespace('http://schema.org/'))
-    return closure_delta
+    return graph + closure_delta
+
+
+def add_labels_for_linked_things(iri, graph):
+    thing = URIRef(iri)
+
+    predicates = [URIRef('http://dbpedia.org/ontology/starring')]
+    subjects = sum([list(graph.subjects(object=thing, predicate=predicate)) for predicate in predicates], [])
+    objects = sum([list(graph.objects(subject=thing, predicate=predicate)) for predicate in predicates], [])
+
+    linked_things = [linked_thing
+                     for linked_thing in set(subjects + objects)
+                        if isinstance(linked_thing, URIRef)]
+    for linked_thing in linked_things:
+        try:
+            uri = str(linked_thing)
+            if not uri == iri2uri(iri):
+                graph.parse(uri)
+        except:
+            # We can gracefully degrade by simply not adding data from bad URIs
+            continue
+
+    return graph
 
 
 def update_thing(iri):
     logging.info('Adding/updating: %s', iri)
 
-    raw_graph = Graph()
-    raw_graph.parse(iri2uri(iri))
+    graph = Graph()
+    graph.parse(iri2uri(iri))
 
-    graph = infer_schema(raw_graph, rules, network)
+    graph = add_labels_for_linked_things(iri, graph)
+    graph = infer_schema(graph, rules, network)
 
     rdf_string = graph.serialize(format='turtle').decode('utf-8')
     mongo.db.things.insert({
@@ -96,4 +121,4 @@ def update_all():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
