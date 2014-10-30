@@ -76,12 +76,15 @@ def add_labels_for_linked_things(iri, graph):
     thing = URIRef(iri)
 
     predicates = [URIRef('http://dbpedia.org/ontology/starring')]
-    subjects = sum([list(graph.subjects(object=thing, predicate=predicate)) for predicate in predicates], [])
-    objects = sum([list(graph.objects(subject=thing, predicate=predicate)) for predicate in predicates], [])
+    subjects = sum([list(graph.subjects(object=thing, predicate=predicate))
+                    for predicate in predicates], [])
+    objects = sum([list(graph.objects(subject=thing, predicate=predicate))
+                   for predicate in predicates], [])
 
     linked_things = [linked_thing
                      for linked_thing in set(subjects + objects)
                         if isinstance(linked_thing, URIRef)]
+
     for linked_thing in linked_things:
         try:
             uri = str(linked_thing)
@@ -94,6 +97,13 @@ def add_labels_for_linked_things(iri, graph):
     return graph
 
 
+def filter_for_schema_org_properties(graph):
+    for s, p, o in graph:
+        if not p.startswith('http://schema.org/'):
+            graph.remove((s, p, o))
+    return graph
+
+
 def update_thing(iri):
     logging.info('Adding/updating: %s', iri)
 
@@ -102,6 +112,7 @@ def update_thing(iri):
 
     graph = add_labels_for_linked_things(iri, graph)
     graph = infer_schema(graph, rules, network)
+    graph = filter_for_schema_org_properties(graph)
 
     rdf_string = graph.serialize(format='turtle').decode('utf-8')
     mongo.db.things.insert({
