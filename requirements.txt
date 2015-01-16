@@ -13,3 +13,4 @@ pytest-cov==1.8.0
 testypie==0.3.0
 laconia==0.2.1
 httplib2==0.9
+-e git+https://github.com/RDFLib/OWL-RL.git#egg=RDFClosure

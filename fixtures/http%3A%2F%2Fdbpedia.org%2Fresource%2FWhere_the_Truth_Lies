@@ -1,8 +1,8 @@
 {
-    "code": 303,
-    "body": "",
+    "body": "", 
     "headers": {
-        "Location": "http://dbpedia.org/data/Where_the_Truth_Lies.xml",
-        "Content-Type": "application/rdf+xml; qs=0.95"
-    }
+        "Content-Type": "application/rdf+xml; qs=0.95", 
+        "Location": "http://dbpedia.org/data/Where_the_Truth_Lies.xml"
+    }, 
+    "code": 303
 }
