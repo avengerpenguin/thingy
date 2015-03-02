@@ -4,6 +4,7 @@ from rdflib import URIRef, Literal, Namespace
 import pytest
 import laconia
 import pymongo
+import requests
 
 
 SCHEMA = Namespace(URIRef('http://schema.org/'))
@@ -11,8 +12,9 @@ KEVIN_BACON = URIRef('http://dbpedia.org/resource/Kevin_Bacon')
 
 
 def url2entity(url):
-    hyperspace.session.headers['Accept'] = 'text/turtle'
-    thingy_home = hyperspace.jump('http://localhost:5100')
+    client = requests.Session()
+    client.headers['Accept'] = 'text/turtle'
+    thingy_home = hyperspace.jump('http://localhost:5100', client=client)
     graph = thingy_home.queries['lookup'][0].build({'iri': url}).submit().data
     factory = laconia.ThingFactory(graph)
     return factory(url)

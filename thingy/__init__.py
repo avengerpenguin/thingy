@@ -7,8 +7,10 @@ from celery import Celery
 import logging
 import os
 from httplib2 import iri2uri
-from RDFClosure import DeductiveClosure
-from RDFClosure.RDFSClosure import RDFS_Semantics
+from FuXi.Rete.RuleStore import SetupRuleStore
+from FuXi.Rete.Util import generateTokenSet
+from FuXi.Horn.HornRules import HornFromN3
+
 
 app = Flask(__name__)
 app.config['MONGO_URI'] = os.getenv('MONGO_URI')
@@ -30,9 +32,9 @@ celery.conf.CELERYBEAT_SCHEDULE = {
 
 celery.conf.BROKER_URL = os.getenv('MONGO_URI')
 
-# rule_store, rule_graph, network = SetupRuleStore(makeNetwork=True)
-# rules = HornFromN3(os.path.join(
-#     os.path.dirname(os.path.realpath(__file__)), 'rules.n3'))
+rule_store, rule_graph, network = SetupRuleStore(makeNetwork=True)
+rules = HornFromN3(os.path.join(
+    os.path.dirname(os.path.realpath(__file__)), 'rules.n3'))
 
 
 @app.route('/')
@@ -57,21 +59,21 @@ def find_uri():
     return graph
 
 
-def infer_schema(graph):
-    graph.parse('./dbpedia-mappings.xml')
-    DeductiveClosure(RDFS_Semantics).expand(graph)
-    return graph
+# def infer_schema(graph):
+#     graph.parse('./dbpedia-mappings.xml')
+#     DeductiveClosure(RDFS_Semantics).expand(graph)
+#     return graph
 
 
-# def infer_schema_old(graph, rules, network):
-#     closure_delta = Graph()
-#     network.inferredFacts = closure_delta
-#     for rule in rules:
-#         network.buildNetworkFromClause(rule)
-#
-#     network.feedFactsToAdd(generateTokenSet(graph))
-#     closure_delta.bind('schema', Namespace('http://schema.org/'))
-#     return graph + closure_delta
+def infer_schema(graph, rules, network):
+    closure_delta = Graph()
+    network.inferredFacts = closure_delta
+    for rule in rules:
+        network.buildNetworkFromClause(rule)
+
+    network.feedFactsToAdd(generateTokenSet(graph))
+    closure_delta.bind('schema', Namespace('http://schema.org/'))
+    return graph + closure_delta
 
 
 def add_labels_for_linked_things(iri, graph):
@@ -113,7 +115,7 @@ def update_thing(iri):
     graph.parse(iri2uri(iri))
 
     graph = add_labels_for_linked_things(iri, graph)
-    graph = infer_schema(graph)
+    graph = infer_schema(graph, rules, network)
     graph = filter_for_schema_org_properties(graph)
 
     rdf_string = graph.serialize(format='turtle').decode('utf-8')

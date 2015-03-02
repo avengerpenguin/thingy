@@ -1,28 +1,60 @@
+.PHONY: clean test
+
 ORG=ross
 NAME=thingy
-VENV=venv
 INSTALLDIR=/opt/${ORG}/${NAME}
-PIP=${VENV}/bin/pip
 
-export PATH := ${VENV}/bin:$(PATH)
+VENV := venv
+PYTHON := $(VENV)/bin/python
+PIP := $(VENV)/bin/pip
+PYTEST := $(VENV)/bin/py.test
+PEP8 := $(VENV)/bin/pep8
+HONCHO := $(VENV)/bin/honcho
 
+PYSRC := $(shell find {thingy,tests} -iname '*.py')
+TARGET := $(PWD)/target
+
+
+all: $(TARGET)/pep8.errors $(TARGET)/test-results.xml
 
 clean:
-	rm -rf ${VENV} ${VENV}-tools celerybeat-schedule celerybeat.pid ${ORG}-${NAME}_*.deb
+	rm -rf venv results node_modules target .coverage htmlcov
 
+$(TARGET):
+	mkdir -p $(TARGET)
 
-venv:
-	virtualenv --python python3 ${VENV}
-	${PIP} install -r requirements.txt
+$(VENV)/deps.touch: $(PIP) requirements.txt
+	$(PIP) install -r requirements.txt
+	touch $(VENV)/deps.touch
 
+$(VENV)/bin/%: $(PIP)
+	$(PIP) install $*
 
-test: venv
-	${VENV}/bin/honcho --procfile Procfile.test --env .env.test start
+$(VENV)/bin/py.test: $(PIP)
+	$(PIP) install pytest pytest-cov pytest-xdist testypie
 
+$(PYTHON) $(PIP):
+	virtualenv -p python3 venv
 
-run: venv
-	${VENV}/bin/honcho start
+$(TARGET)/pep8.errors: $(TARGET) $(PEP8) $(PYSRC)
+	$(PEP8) --exclude=venv . | tee $(TARGET)/pep8.errors || true
 
+$(TARGET)/test-results.xml: $(PIP) $(VENV)/deps.touch $(PYSRC) $(PYTEST) $(HONCHO)
+	export PATH=$(VENV)/bin:$(PATH) && \
+		$(HONCHO) --procfile Procfile.test --env .env.test start
+
+heroku: $(TARGET)/unit-tests.xml
+	pip install django-herokuapp
+	$(PYTHON) manage.py heroku_audit
+	git push heroku master
+	heroku run python manage.py makemigrations
+
+migrate:
+	heroku run python manage.py migrate
+
+secret: heroku
+	heroku config:set SECRET_KEY=`openssl rand -base64 32`
+	heroku config:set PYTHONHASHSEED=random
 
 deb: venv
 	virtualenv ${VENV}-tools
