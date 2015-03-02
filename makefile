@@ -10,6 +10,7 @@ PIP := $(VENV)/bin/pip
 PYTEST := $(VENV)/bin/py.test
 PEP8 := $(VENV)/bin/pep8
 HONCHO := $(VENV)/bin/honcho
+COVERAGE := $(VENV)/bin/coverage
 
 PYSRC := $(shell find {thingy,tests} -iname '*.py')
 TARGET := $(PWD)/target
@@ -39,7 +40,7 @@ $(PYTHON) $(PIP):
 $(TARGET)/pep8.errors: $(TARGET) $(PEP8) $(PYSRC)
 	$(PEP8) --exclude=venv . | tee $(TARGET)/pep8.errors || true
 
-$(TARGET)/test-results.xml: $(PIP) $(VENV)/deps.touch $(PYSRC) $(PYTEST) $(HONCHO)
+$(TARGET)/test-results.xml: $(PIP) $(VENV)/deps.touch $(PYSRC) $(PYTEST) $(HONCHO) $(COVERAGE)
 	export PATH=$(VENV)/bin:$(PATH) && \
 		$(HONCHO) --procfile Procfile.test --env .env.test start
 

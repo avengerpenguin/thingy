@@ -18,7 +18,7 @@ app.config['DEBUG'] = True
 mongo = PyMongo(app)
 
 
-celery = Celery()
+celery = Celery('thingy')
 celery.conf.update(
     CELERY_ENABLE_UTC=True,
     CELERY_TIMEZONE='Europe/London',
@@ -31,6 +31,7 @@ celery.conf.CELERYBEAT_SCHEDULE = {
 }
 
 celery.conf.BROKER_URL = os.getenv('MONGO_URI')
+celery.conf
 
 rule_store, rule_graph, network = SetupRuleStore(makeNetwork=True)
 rules = HornFromN3(os.path.join(
@@ -54,15 +55,9 @@ def find_uri():
         graph = Graph()
         graph.parse(data=entry['graph'].encode('utf-8'), format='turtle')
     else:
-        graph = update_thing(iri)
+        graph = update_thing(iri, quick=True)
 
     return graph
-
-
-# def infer_schema(graph):
-#     graph.parse('./dbpedia-mappings.xml')
-#     DeductiveClosure(RDFS_Semantics).expand(graph)
-#     return graph
 
 
 def infer_schema(graph, rules, network):
@@ -108,13 +103,16 @@ def filter_for_schema_org_properties(graph):
     return graph
 
 
-def update_thing(iri):
-    logging.info('Adding/updating: %s', iri)
+@celery.task
+def update_thing(iri, quick=False):
+    logging.info('Adding/updating: %s (quick=%s)', iri, quick)
 
     graph = Graph()
     graph.parse(iri2uri(iri))
 
-    graph = add_labels_for_linked_things(iri, graph)
+    # Quick param tells us we're in a request thread and want to do less work
+    if not quick:
+        graph = add_labels_for_linked_things(iri, graph)
     graph = infer_schema(graph, rules, network)
     graph = filter_for_schema_org_properties(graph)
 
@@ -122,6 +120,10 @@ def update_thing(iri):
     mongo.db.things.insert({
         '_id': iri, 'graph': rdf_string, 'updated': datetime.datetime.utcnow()
     })
+
+    if quick:
+        # Start an async task to do a fuller update that doesn't block requests
+        update_thing.delay(iri, quick=False)
 
     return graph
 
@@ -132,8 +134,8 @@ def update_all():
     stale_date = datetime.datetime.utcnow() - datetime.timedelta(hours=1)
     for entry in mongo.db.things.find({'updated': {'$lt': stale_date}}):
         logging.info('Found stale: %s', entry['_id'])
-        update_thing(entry['_id'])
+        update_thing.delay(entry['_id'])
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=int(os.getenv('PORT', 5000)))
