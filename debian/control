@@ -1,0 +1,12 @@
+Source: thingy
+Section: python
+Priority: extra
+Maintainer: Ross Fenning <ross.fenning@gmail.com>
+Build-Depends: debhelper (>= 9), python, dh-virtualenv (>= 0.8)
+Standards-Version: 3.9.5
+
+Package: thingy
+Architecture: any
+Pre-Depends: dpkg (>= 1.16.1), python-minimal
+Depends: mongodb-server, gunicorn
+Description: A REST API for things.
