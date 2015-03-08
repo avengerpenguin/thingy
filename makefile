@@ -12,7 +12,7 @@ PEP8 := $(VENV)/bin/pep8
 HONCHO := $(VENV)/bin/honcho
 COVERAGE := $(VENV)/bin/coverage
 
-PYSRC := $(shell find {thingy,tests} -iname '*.py')
+PYSRC := $(shell find thingy tests -iname '*.py')
 TARGET := $(PWD)/target
 
 GEMBIN := ${HOME}/.gem/ruby/$(shell ruby -e 'puts RUBY_VERSION')/bin
@@ -60,29 +60,11 @@ secret: heroku
 	heroku config:set SECRET_KEY=`openssl rand -base64 32`
 	heroku config:set PYTHONHASHSEED=random
 
-$(TARGET)/init/$(NAME).conf: Procfile $(HONCHO)
-	$(HONCHO) export --app-root=$(INSTALLDIR) --user=$(NAME) --app=$(NANE) supervisord $(TARGET)/init
-
-init: $(TARGET)/init/$(NAME).conf
-
 $(GEMBIN)/%:
 	gem install $* --user-install
 
-deb: $(TARGET) $(PIP) requirements.txt $(PYSRC) $(FPM)
-	rm -rf $(TARGET)/venv
-	virtualenv -p python3 $(TARGET)/build
-	$(TARGET)/build/bin/pip install -r requirements.txt
-	$(TARGET)/build/bin/python setup.py install
-	virtualenv -p python3 --relocatable $(TARGET)/build
-
-	${HOME}/.gem/ruby/1.9.1/bin/fpm \
-		--verbose --license GPLv3+ -m "Ross Fenning <deb@rossfenning.co.uk>" \
-		-s dir -t deb -n ${ORG}-${NAME} --version $(shell $(VENV)/bin/python setup.py --version) \
-		--exclude '*.pyc' --exclude '*.pyo' --exclude __pycache__ \
-		--depends supervisor \
-		--deb-user $(NAME) --deb-group $(NAME) \
-		$(TARGET)/{bin,include,lib}=${INSTALLDIR} etc=/ var=/
-
-deploy: deb
-	scp $(ORG)-$(NAME)_*.deb $(REMOTE):/tmp
-	ssh $(REMOTE) "cd /tmp ; dpkg -i $(ORG)-$(NAME)_*.deb"
+deb: $(TARGET) $(PIP) requirements.txt $(PYSRC) Dockerfile
+	sudo docker build -t $(ORG)/$(NAME) .
+	sudo docker stop $(NAME) || true
+	sudo docker rm $(NAME) || true
+	sudo docker run -v $(PWD)/dist:/deb -w /deb -u $(shell id -u) $(ORG)/$(NAME) cp /$(NAME)_0.0.0_amd64.deb /deb

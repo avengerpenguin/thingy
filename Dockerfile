@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y --force-yes dh-virtualenv && apt-get cl
 
 ADD . /app
 WORKDIR /app
+RUN rm -rf venv
 
 RUN dpkg-buildpackage -us -uc
 RUN gdebi -n ../thingy_0.0.0_amd64.deb
