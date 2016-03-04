@@ -4,7 +4,7 @@ gunicorn==19.4.5
 pymongo==3.2.1
 rdflib==4.2.1
 flask-rdf==0.2.0
-celery==3.1.20
+celery==3.1.21
 -e git+https://github.com/avengerpenguin/FuXi.git#egg=FuXi
 laconia==0.3.0
 httplib2==0.9.2
