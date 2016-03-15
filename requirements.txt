@@ -1,7 +1,7 @@
 Flask==0.10.1
 Flask-PyMongo==0.4.1
 gunicorn==19.4.5
-pymongo==3.2.1
+pymongo==3.2.2
 rdflib==4.2.1
 flask-rdf==0.2.0
 celery==3.1.23
