@@ -7,4 +7,4 @@ flask-rdf==0.2.0
 celery==4.0.2
 -e git+https://github.com/avengerpenguin/FuXi.git#egg=FuXi
 laconia==0.3.0
-httplib2==0.10.1
+httplib2==0.10.2
