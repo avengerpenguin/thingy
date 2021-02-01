@@ -47,6 +47,8 @@ $(TARGET)/test-results.xml: $(PIP) $(VENV)/deps.touch $(PYSRC) $(PYTEST) $(HONCH
 	export PATH=$(VENV)/bin:$(PATH) && \
 		$(HONCHO) --procfile Procfile.test --env .env.test start
 
+test: $(TARGET)/test-results.xml
+
 heroku: $(TARGET)/unit-tests.xml
 	pip install django-herokuapp
 	$(PYTHON) manage.py heroku_audit
@@ -64,7 +66,7 @@ $(GEMBIN)/%:
 	gem install $* --user-install
 
 deb: $(TARGET) $(PIP) requirements.txt $(PYSRC) Dockerfile
-	sudo docker build -t $(ORG)/$(NAME) .
-	sudo docker stop $(NAME) || true
-	sudo docker rm $(NAME) || true
-	sudo docker run -v $(PWD)/dist:/deb -w /deb -u $(shell id -u) $(ORG)/$(NAME) cp /$(NAME)_0.0.0_amd64.deb /deb
+	docker build -t $(ORG)/$(NAME) .
+	docker stop $(NAME) || true
+	docker rm $(NAME) || true
+	docker run -v $(PWD)/dist:/deb -w /deb -u $(shell id -u) $(ORG)/$(NAME) cp /$(NAME)_0.0.0_amd64.deb /deb
