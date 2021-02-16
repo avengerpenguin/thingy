@@ -6845,402 +6845,402 @@
                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/><rdfs:label xml:lang="en">mill code NL</rdfs:label><rdfs:label xml:lang="nl">molen code NL</rdfs:label><rdfs:comment xml:lang="en">mills code from the central Dutch database on mills</rdfs:comment><rdfs:comment xml:lang="nl">unieke code voor molens in www.molendatabase.nl</rdfs:comment><rdfs:domain rdf:resource="http://dbpedia.org/ontology/Mill"/><rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/><prov:wasDerivedFrom rdf:resource="http://mappings.dbpedia.org/index.php/OntologyProperty:millsCodeNL"/>
                 </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Weapon/length">
             <rdfs:label xml:lang="nl">lengte (mm)</rdfs:label><rdfs:label xml:lang="de">Länge (mm)</rdfs:label><rdfs:label xml:lang="en">length (mm)</rdfs:label><rdfs:label xml:lang="el">μήκος (mm)</rdfs:label><rdfs:label xml:lang="fr">longueur (mm)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Weapon"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/millimetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Automobile/wheelbase">
             <rdfs:label xml:lang="en">wheelbase (mm)</rdfs:label><rdfs:label xml:lang="de">Radstand (mm)</rdfs:label><rdfs:label xml:lang="sr">међуосовинско растојање (mm)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Automobile"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/millimetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Spacecraft/totalMass">
             <rdfs:label xml:lang="en">total mass (kg)</rdfs:label><rdfs:label xml:lang="de">Gesamtmasse (kg)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Spacecraft"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilogram"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/PopulatedPlace/areaUrban">
             <rdfs:label xml:lang="en">area urban (km2)</rdfs:label><rdfs:label xml:lang="de">Stadtgebiet (km2)</rdfs:label><rdfs:label xml:lang="el">αστική περιοχή (km2)</rdfs:label><rdfs:label xml:lang="sr">урбана површина (km2)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/squareKilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/SpaceMission/lunarSampleMass">
             <rdfs:label xml:lang="en">lunar sample mass (kg)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/SpaceMission"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilogram"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Galaxy/volume">
             <rdfs:label xml:lang="nl">volume (km3)</rdfs:label><rdfs:label xml:lang="de">Volumen (km3)</rdfs:label><rdfs:label xml:lang="en">volume (km3)</rdfs:label><rdfs:label xml:lang="el">όγκος (km3)</rdfs:label><rdfs:label xml:lang="sr">запремина (km3)</rdfs:label><rdfs:label xml:lang="fr">volume (km3)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Galaxy"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/cubicKilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Lake/volume">
             <rdfs:label xml:lang="nl">volume (μ³)</rdfs:label><rdfs:label xml:lang="de">Volumen (μ³)</rdfs:label><rdfs:label xml:lang="en">volume (μ³)</rdfs:label><rdfs:label xml:lang="el">όγκος (μ³)</rdfs:label><rdfs:label xml:lang="sr">запремина (μ³)</rdfs:label><rdfs:label xml:lang="fr">volume (μ³)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Lake"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/cubicMetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/AutomobileEngine/pistonStroke">
             <rdfs:label xml:lang="en">piston stroke (mm)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/AutomobileEngine"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/millimetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Spacecraft/cargoWater">
             <rdfs:label xml:lang="en">cargo water (kg)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Spacecraft"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilogram"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/AutomobileEngine/length">
             <rdfs:label xml:lang="nl">lengte (mm)</rdfs:label><rdfs:label xml:lang="de">Länge (mm)</rdfs:label><rdfs:label xml:lang="en">length (mm)</rdfs:label><rdfs:label xml:lang="el">μήκος (mm)</rdfs:label><rdfs:label xml:lang="fr">longueur (mm)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/AutomobileEngine"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/millimetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/SpaceMission/mass">
             <rdfs:label xml:lang="en">mass (kg)</rdfs:label><rdfs:label xml:lang="de">Masse (kg)</rdfs:label><rdfs:label xml:lang="el">μάζα (kg)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/SpaceMission"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilogram"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Galaxy/periapsis">
             <rdfs:label xml:lang="en">periapsis (km)</rdfs:label><rdfs:label xml:lang="de">Periapsisdistanz (km)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Galaxy"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Spacecraft/dockedTime">
             <rdfs:label xml:lang="en">docked time (μ)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Spacecraft"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/day"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Galaxy/apoapsis">
             <rdfs:label xml:lang="en">apoapsis (km)</rdfs:label><rdfs:label xml:lang="de">Apoapsisdistanz (km)</rdfs:label><rdfs:label xml:lang="el">απόαψης (km)</rdfs:label><rdfs:label xml:lang="sr">апоапсис (km)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Galaxy"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Weapon/diameter">
             <rdfs:label xml:lang="nl">diameter (mm)</rdfs:label><rdfs:label xml:lang="de">Durchmesser (mm)</rdfs:label><rdfs:label xml:lang="en">diameter (mm)</rdfs:label><rdfs:label xml:lang="el">διάμετρος (mm)</rdfs:label><rdfs:label xml:lang="fr">diamètre (mm)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Weapon"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/millimetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Canal/originalMaximumBoatLength">
             <rdfs:label xml:lang="en">original maximum boat length (μ)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Canal"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/metre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/SpaceMission/stationVisitDuration">
             <rdfs:label xml:lang="en">station visit duration (ω)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/SpaceMission"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/hour"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Spacecraft/cargoFuel">
             <rdfs:label xml:lang="en">cargo fuel (kg)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Spacecraft"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilogram"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Stream/minimumDischarge">
             <rdfs:label xml:lang="en">minimum discharge (m³/s)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Stream"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/cubicMetrePerSecond"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Planet/periapsis">
             <rdfs:label xml:lang="en">periapsis (km)</rdfs:label><rdfs:label xml:lang="de">Periapsisdistanz (km)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Planet"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/ChemicalSubstance/boilingPoint">
             <rdfs:label xml:lang="ja">沸点 (K)</rdfs:label><rdfs:label xml:lang="nl">kookpunt (K)</rdfs:label><rdfs:label xml:lang="de">Siedepunkt (K)</rdfs:label><rdfs:label xml:lang="en">boiling point (K)</rdfs:label><rdfs:label xml:lang="el">σημείο βρασμού (K)</rdfs:label><rdfs:label xml:lang="fr">point d'ébullition (K)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kelvin"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/AutomobileEngine/weight">
             <rdfs:label xml:lang="pt">peso (kg)</rdfs:label><rdfs:label xml:lang="ja">体重 (kg)</rdfs:label><rdfs:label xml:lang="nl">gewicht (kg)</rdfs:label><rdfs:label xml:lang="de">Gewicht (kg)</rdfs:label><rdfs:label xml:lang="en">weight (kg)</rdfs:label><rdfs:label xml:lang="el">βάρος (kg)</rdfs:label><rdfs:label xml:lang="sr">тежина (kg)</rdfs:label><rdfs:label xml:lang="fr">poids (kg)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/AutomobileEngine"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilogram"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/MeanOfTransportation/width">
             <rdfs:label xml:lang="nl">breedte (mm)</rdfs:label><rdfs:label xml:lang="de">Breite (mm)</rdfs:label><rdfs:label xml:lang="en">width (mm)</rdfs:label><rdfs:label xml:lang="el">πλάτος (mm)</rdfs:label><rdfs:label xml:lang="sr">ширина (mm)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/MeanOfTransportation"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/millimetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Planet/apoapsis">
             <rdfs:label xml:lang="en">apoapsis (km)</rdfs:label><rdfs:label xml:lang="de">Apoapsisdistanz (km)</rdfs:label><rdfs:label xml:lang="el">απόαψης (km)</rdfs:label><rdfs:label xml:lang="sr">апоапсис (km)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Planet"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Stream/watershed">
             <rdfs:label xml:lang="nl">waterscheiding (km2)</rdfs:label><rdfs:label xml:lang="de">Wasserscheide (km2)</rdfs:label><rdfs:label xml:lang="es">cuenca hidrográfica (km2)</rdfs:label><rdfs:label xml:lang="en">watershed (km2)</rdfs:label><rdfs:label xml:lang="el">λεκάνη_απορροής (km2)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Stream"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/squareKilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Rocket/mass">
             <rdfs:label xml:lang="en">mass (kg)</rdfs:label><rdfs:label xml:lang="de">Masse (kg)</rdfs:label><rdfs:label xml:lang="el">μάζα (kg)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Rocket"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilogram"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Canal/maximumBoatLength">
             <rdfs:label xml:lang="en">maximum boat length (μ)</rdfs:label><rdfs:label xml:lang="el">μέγιστο_μήκος_πλοίου (μ)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Canal"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/metre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Planet/meanTemperature">
             <rdfs:label xml:lang="en">mean temperature (K)</rdfs:label><rdfs:label xml:lang="de">Durchschnittstemperatur (K)</rdfs:label><rdfs:label xml:lang="el">μέση θερμοκρασία (K)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Planet"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kelvin"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/PopulatedPlace/areaMetro">
             <rdfs:label xml:lang="en">area metro (km2)</rdfs:label><rdfs:label xml:lang="el">περιοχή μετρό (km2)</rdfs:label><rdfs:label xml:lang="sr">метрополска област (km2)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/squareKilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Astronaut/timeInSpace">
             <rdfs:label xml:lang="en">time in space (m)</rdfs:label><rdfs:label xml:lang="de">Zeit im Raum (m)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Astronaut"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/minute"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Stream/dischargeAverage">
             <rdfs:label xml:lang="en">discharge average (m³/s)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Stream"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/cubicMetrePerSecond"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Weapon/width">
             <rdfs:label xml:lang="nl">breedte (mm)</rdfs:label><rdfs:label xml:lang="de">Breite (mm)</rdfs:label><rdfs:label xml:lang="en">width (mm)</rdfs:label><rdfs:label xml:lang="el">πλάτος (mm)</rdfs:label><rdfs:label xml:lang="sr">ширина (mm)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Weapon"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/millimetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Spacecraft/port2DockedTime">
             <rdfs:label xml:lang="en">port2 docked time (μ)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Spacecraft"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/day"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/MeanOfTransportation/weight">
             <rdfs:label xml:lang="pt">peso (kg)</rdfs:label><rdfs:label xml:lang="ja">体重 (kg)</rdfs:label><rdfs:label xml:lang="nl">gewicht (kg)</rdfs:label><rdfs:label xml:lang="de">Gewicht (kg)</rdfs:label><rdfs:label xml:lang="en">weight (kg)</rdfs:label><rdfs:label xml:lang="el">βάρος (kg)</rdfs:label><rdfs:label xml:lang="sr">тежина (kg)</rdfs:label><rdfs:label xml:lang="fr">poids (kg)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/MeanOfTransportation"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilogram"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/PopulatedPlace/populationMetroDensity">
             <rdfs:label xml:lang="en">population metro density (/sqkm)</rdfs:label><rdfs:label xml:lang="nl">bevolkingsdichtheid (/sqkm)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/inhabitantsPerSquareKilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/MeanOfTransportation/length">
             <rdfs:label xml:lang="nl">lengte (mm)</rdfs:label><rdfs:label xml:lang="de">Länge (mm)</rdfs:label><rdfs:label xml:lang="en">length (mm)</rdfs:label><rdfs:label xml:lang="el">μήκος (mm)</rdfs:label><rdfs:label xml:lang="fr">longueur (mm)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/MeanOfTransportation"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/millimetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/MeanOfTransportation/mass">
             <rdfs:label xml:lang="en">mass (kg)</rdfs:label><rdfs:label xml:lang="de">Masse (kg)</rdfs:label><rdfs:label xml:lang="el">μάζα (kg)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/MeanOfTransportation"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilogram"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/SpaceMission/distanceTraveled">
             <rdfs:label xml:lang="en">distance traveled (km)</rdfs:label><rdfs:label xml:lang="de">Zurückgelegte Entfernung (km)</rdfs:label><rdfs:label xml:lang="nl">afgelegde afstand (km)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/SpaceMission"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/GeopoliticalOrganisation/populationDensity">
             <rdfs:label xml:lang="en">population density (/sqkm)</rdfs:label><rdfs:label xml:lang="nl">bevolkingsdichtheid (/sqkm)</rdfs:label><rdfs:label xml:lang="de">Bevölkerungsdichte (/sqkm)</rdfs:label><rdfs:label xml:lang="el">πυκνότητα_πληθυσμού (/sqkm)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/GeopoliticalOrganisation"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/inhabitantsPerSquareKilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Weapon/height">
             <rdfs:label xml:lang="pt">altura (mm)</rdfs:label><rdfs:label xml:lang="ja">身長 (mm)</rdfs:label><rdfs:label xml:lang="nl">hoogte (mm)</rdfs:label><rdfs:label xml:lang="de">Höhe (mm)</rdfs:label><rdfs:label xml:lang="sl">višina (mm)</rdfs:label><rdfs:label xml:lang="en">height (mm)</rdfs:label><rdfs:label xml:lang="el">ύψος (mm)</rdfs:label><rdfs:label xml:lang="fr">hauteur (mm)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Weapon"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/millimetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Stream/maximumDischarge">
             <rdfs:label xml:lang="en">maximum discharge (m³/s)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Stream"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/cubicMetrePerSecond"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Galaxy/maximumTemperature">
             <rdfs:label xml:lang="en">maximum temperature (K)</rdfs:label><rdfs:label xml:lang="de">Maximaltemperatur (K)</rdfs:label><rdfs:label xml:lang="el">μέγιστη θερμοκρασία (K)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Galaxy"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kelvin"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Spacecraft/periapsis">
             <rdfs:label xml:lang="en">periapsis (km)</rdfs:label><rdfs:label xml:lang="de">Periapsisdistanz (km)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Spacecraft"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/AutomobileEngine/width">
             <rdfs:label xml:lang="nl">breedte (mm)</rdfs:label><rdfs:label xml:lang="de">Breite (mm)</rdfs:label><rdfs:label xml:lang="en">width (mm)</rdfs:label><rdfs:label xml:lang="el">πλάτος (mm)</rdfs:label><rdfs:label xml:lang="sr">ширина (mm)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/AutomobileEngine"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/millimetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/AutomobileEngine/powerOutput">
             <rdfs:label xml:lang="en">power output (kW)</rdfs:label><rdfs:label xml:lang="de">Ausgangsleistung (kW)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/AutomobileEngine"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilowatt"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Spacecraft/totalCargo">
             <rdfs:label xml:lang="en">total cargo (kg)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Spacecraft"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilogram"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Spacecraft/freeFlightTime">
             <rdfs:label xml:lang="en">free flight time (μ)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Spacecraft"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/day"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/SpaceShuttle/timeInSpace">
             <rdfs:label xml:lang="en">time in space (μ)</rdfs:label><rdfs:label xml:lang="de">Zeit im Raum (μ)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/SpaceShuttle"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/day"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/PopulatedPlace/areaTotal">
             <rdfs:label xml:lang="nl">oppervlakte (km2)</rdfs:label><rdfs:label xml:lang="de">Fläche (km2)</rdfs:label><rdfs:label xml:lang="en">area total (km2)</rdfs:label><rdfs:label xml:lang="el">έκταση περιοχής (km2)</rdfs:label><rdfs:label xml:lang="sr">укупна површина (km2)</rdfs:label><rdfs:label xml:lang="fr">superficie (km2)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/squareKilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Stream/discharge">
             <rdfs:label xml:lang="en">discharge (m³/s)</rdfs:label><rdfs:label xml:lang="el">εκροή (m³/s)</rdfs:label><rdfs:label xml:lang="nl">uitstoot (m³/s)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Stream"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/cubicMetrePerSecond"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/SpaceMission/lunarSurfaceTime">
             <rdfs:label xml:lang="en">lunar surface time (ω)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/SpaceMission"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/hour"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Drug/boilingPoint">
             <rdfs:label xml:lang="ja">沸点 (K)</rdfs:label><rdfs:label xml:lang="nl">kookpunt (K)</rdfs:label><rdfs:label xml:lang="de">Siedepunkt (K)</rdfs:label><rdfs:label xml:lang="en">boiling point (K)</rdfs:label><rdfs:label xml:lang="el">σημείο βρασμού (K)</rdfs:label><rdfs:label xml:lang="fr">point d'ébullition (K)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Drug"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kelvin"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Canal/maximumBoatBeam">
             <rdfs:label xml:lang="en">maximum boat beam (μ)</rdfs:label><rdfs:label xml:lang="el">μέγιστο_πλάτος_πλοίου (μ)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Canal"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/metre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/ChemicalSubstance/density">
             <rdfs:label xml:lang="pt">densidade (μ3)</rdfs:label><rdfs:label xml:lang="ja">密度 (μ3)</rdfs:label><rdfs:label xml:lang="de">Dichte (μ3)</rdfs:label><rdfs:label xml:lang="en">density (μ3)</rdfs:label><rdfs:label xml:lang="it">densità (μ3)</rdfs:label><rdfs:label xml:lang="el">πυκνότητα (μ3)</rdfs:label><rdfs:label xml:lang="fr">densité (μ3)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilogramPerCubicMetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Automobile/fuelCapacity">
             <rdfs:label xml:lang="en">fuel capacity (l)</rdfs:label><rdfs:label xml:lang="el">χωρητικότητα καυσίμου (l)</rdfs:label><rdfs:label xml:lang="de">Kraftstoffkapazität (l)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Automobile"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/litre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Planet/maximumTemperature">
             <rdfs:label xml:lang="en">maximum temperature (K)</rdfs:label><rdfs:label xml:lang="de">Maximaltemperatur (K)</rdfs:label><rdfs:label xml:lang="el">μέγιστη θερμοκρασία (K)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Planet"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kelvin"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/PopulatedPlace/populationDensity">
             <rdfs:label xml:lang="en">population density (/sqkm)</rdfs:label><rdfs:label xml:lang="nl">bevolkingsdichtheid (/sqkm)</rdfs:label><rdfs:label xml:lang="de">Bevölkerungsdichte (/sqkm)</rdfs:label><rdfs:label xml:lang="el">πυκνότητα_πληθυσμού (/sqkm)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/inhabitantsPerSquareKilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/AutomobileEngine/cylinderBore">
             <rdfs:label xml:lang="en">cylinder bore (mm)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/AutomobileEngine"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/millimetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/SpaceMission/lunarOrbitTime">
             <rdfs:label xml:lang="en">lunar orbit time (ω)</rdfs:label><rdfs:label xml:lang="de">Mondumlaufzeit (ω)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/SpaceMission"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/hour"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Galaxy/density">
             <rdfs:label xml:lang="pt">densidade (μ3)</rdfs:label><rdfs:label xml:lang="ja">密度 (μ3)</rdfs:label><rdfs:label xml:lang="de">Dichte (μ3)</rdfs:label><rdfs:label xml:lang="en">density (μ3)</rdfs:label><rdfs:label xml:lang="it">densità (μ3)</rdfs:label><rdfs:label xml:lang="el">πυκνότητα (μ3)</rdfs:label><rdfs:label xml:lang="fr">densité (μ3)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Galaxy"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilogramPerCubicMetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Work/runtime">
             <rdfs:label xml:lang="nl">duur (m)</rdfs:label><rdfs:label xml:lang="de">Laufzeit (m)</rdfs:label><rdfs:label xml:lang="en">runtime (m)</rdfs:label><rdfs:label xml:lang="el">διάρκεια (m)</rdfs:label><rdfs:label xml:lang="fr">durée (m)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Work"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/minute"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Planet/mass">
             <rdfs:label xml:lang="en">mass (kg)</rdfs:label><rdfs:label xml:lang="de">Masse (kg)</rdfs:label><rdfs:label xml:lang="el">μάζα (kg)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Planet"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilogram"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/MeanOfTransportation/height">
             <rdfs:label xml:lang="pt">altura (mm)</rdfs:label><rdfs:label xml:lang="ja">身長 (mm)</rdfs:label><rdfs:label xml:lang="nl">hoogte (mm)</rdfs:label><rdfs:label xml:lang="de">Höhe (mm)</rdfs:label><rdfs:label xml:lang="sl">višina (mm)</rdfs:label><rdfs:label xml:lang="en">height (mm)</rdfs:label><rdfs:label xml:lang="el">ύψος (mm)</rdfs:label><rdfs:label xml:lang="fr">hauteur (mm)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/MeanOfTransportation"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/millimetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Galaxy/meanRadius">
             <rdfs:label xml:lang="en">mean radius (km)</rdfs:label><rdfs:label xml:lang="de">durchschnittlicher Radius (km)</rdfs:label><rdfs:label xml:lang="el">μέση ακτίνα (km)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Galaxy"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Planet/minimumTemperature">
             <rdfs:label xml:lang="en">minimum temperature (K)</rdfs:label><rdfs:label xml:lang="de">geringste Temperatur (K)</rdfs:label><rdfs:label xml:lang="el">ελάχιστη θερμοκρασία (K)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Planet"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kelvin"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Spacecraft/cargoGas">
             <rdfs:label xml:lang="en">cargo gas (kg)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Spacecraft"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilogram"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Planet/meanRadius">
             <rdfs:label xml:lang="en">mean radius (km)</rdfs:label><rdfs:label xml:lang="de">durchschnittlicher Radius (km)</rdfs:label><rdfs:label xml:lang="el">μέση ακτίνα (km)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Planet"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/SpaceStation/volume">
             <rdfs:label xml:lang="nl">volume (μ³)</rdfs:label><rdfs:label xml:lang="de">Volumen (μ³)</rdfs:label><rdfs:label xml:lang="en">volume (μ³)</rdfs:label><rdfs:label xml:lang="el">όγκος (μ³)</rdfs:label><rdfs:label xml:lang="sr">запремина (μ³)</rdfs:label><rdfs:label xml:lang="fr">volume (μ³)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/SpaceStation"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/cubicMetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/SpaceMission/cmpEvaDuration">
             <rdfs:label xml:lang="en">CMP EVA duration (ω)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/SpaceMission"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/hour"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/PopulatedPlace/populationUrbanDensity">
             <rdfs:label xml:lang="en">population urban density (/sqkm)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/inhabitantsPerSquareKilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Planet/orbitalPeriod">
             <rdfs:label xml:lang="en">orbital period (μ)</rdfs:label><rdfs:label xml:lang="de">Umlaufzeit (μ)</rdfs:label><rdfs:label xml:lang="el">Περίοδος περιφοράς (μ)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Planet"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/day"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/AutomobileEngine/topSpeed">
             <rdfs:label xml:lang="en">top speed (kmh)</rdfs:label><rdfs:label xml:lang="de">Höchstgeschwindigkeit (kmh)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/AutomobileEngine"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilometrePerHour"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Drug/meltingPoint">
             <rdfs:label xml:lang="en">melting point (K)</rdfs:label><rdfs:label xml:lang="de">Schmelzpunkt (K)</rdfs:label><rdfs:label xml:lang="fr">point de fusion (K)</rdfs:label><rdfs:label xml:lang="ja">融点 (K)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Drug"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kelvin"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/MeanOfTransportation/diameter">
             <rdfs:label xml:lang="nl">diameter (μ)</rdfs:label><rdfs:label xml:lang="de">Durchmesser (μ)</rdfs:label><rdfs:label xml:lang="en">diameter (μ)</rdfs:label><rdfs:label xml:lang="el">διάμετρος (μ)</rdfs:label><rdfs:label xml:lang="fr">diamètre (μ)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/MeanOfTransportation"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/metre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/School/campusSize">
             <rdfs:label xml:lang="en">campus size (km2)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/School"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/squareKilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Galaxy/minimumTemperature">
             <rdfs:label xml:lang="en">minimum temperature (K)</rdfs:label><rdfs:label xml:lang="de">geringste Temperatur (K)</rdfs:label><rdfs:label xml:lang="el">ελάχιστη θερμοκρασία (K)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Galaxy"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kelvin"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Canal/originalMaximumBoatBeam">
             <rdfs:label xml:lang="en">original maximum boat beam (μ)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Canal"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/metre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/AutomobileEngine/co2Emission">
             <rdfs:label xml:lang="en">CO2 emission (g/km)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/AutomobileEngine"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/gramPerKilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/AutomobileEngine/torqueOutput">
             <rdfs:label xml:lang="en">torque output (Nm)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/AutomobileEngine"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/newtonMetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Galaxy/meanTemperature">
             <rdfs:label xml:lang="en">mean temperature (K)</rdfs:label><rdfs:label xml:lang="de">Durchschnittstemperatur (K)</rdfs:label><rdfs:label xml:lang="el">μέση θερμοκρασία (K)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Galaxy"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kelvin"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Rocket/lowerEarthOrbitPayload">
@@ -7250,27 +7250,27 @@
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilogram"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/SpaceMission/lunarEvaTime">
             <rdfs:label xml:lang="en">lunar EVA time (ω)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/SpaceMission"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/hour"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/AutomobileEngine/displacement">
             <rdfs:label xml:lang="en">displacement (cc)</rdfs:label><rdfs:label xml:lang="es">cilindrada (cc)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/AutomobileEngine"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/cubicCentimetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Galaxy/orbitalPeriod">
             <rdfs:label xml:lang="en">orbital period (μ)</rdfs:label><rdfs:label xml:lang="de">Umlaufzeit (μ)</rdfs:label><rdfs:label xml:lang="el">Περίοδος περιφοράς (μ)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Galaxy"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/day"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Planet/temperature">
             <rdfs:label xml:lang="en">temperature (K)</rdfs:label><rdfs:label xml:lang="de">Temperatur (K)</rdfs:label><rdfs:label xml:lang="el">θερμοκρασία (K)</rdfs:label><rdfs:label xml:lang="fr">température (K)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Planet"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kelvin"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/ChemicalSubstance/meltingPoint">
             <rdfs:label xml:lang="en">melting point (K)</rdfs:label><rdfs:label xml:lang="de">Schmelzpunkt (K)</rdfs:label><rdfs:label xml:lang="fr">point de fusion (K)</rdfs:label><rdfs:label xml:lang="ja">融点 (K)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kelvin"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Software/fileSize">
@@ -7280,32 +7280,32 @@
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/megabyte"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/GeopoliticalOrganisation/areaMetro">
             <rdfs:label xml:lang="en">area metro (km2)</rdfs:label><rdfs:label xml:lang="el">περιοχή μετρό (km2)</rdfs:label><rdfs:label xml:lang="sr">метрополска област (km2)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/GeopoliticalOrganisation"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/squareKilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Galaxy/temperature">
             <rdfs:label xml:lang="en">temperature (K)</rdfs:label><rdfs:label xml:lang="de">Temperatur (K)</rdfs:label><rdfs:label xml:lang="el">θερμοκρασία (K)</rdfs:label><rdfs:label xml:lang="fr">température (K)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Galaxy"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kelvin"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/GrandPrix/course">
             <rdfs:label xml:lang="en">course (km)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/GrandPrix"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Infrastructure/length">
             <rdfs:label xml:lang="nl">lengte (km)</rdfs:label><rdfs:label xml:lang="de">Länge (km)</rdfs:label><rdfs:label xml:lang="en">length (km)</rdfs:label><rdfs:label xml:lang="el">μήκος (km)</rdfs:label><rdfs:label xml:lang="fr">longueur (km)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Infrastructure"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Galaxy/surfaceArea">
             <rdfs:label xml:lang="en">surface area (km2)</rdfs:label><rdfs:label xml:lang="de">Oberfläche (km2)</rdfs:label><rdfs:label xml:lang="el">έκταση (km2)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Galaxy"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/squareKilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/AutomobileEngine/diameter">
             <rdfs:label xml:lang="nl">diameter (mm)</rdfs:label><rdfs:label xml:lang="de">Durchmesser (mm)</rdfs:label><rdfs:label xml:lang="en">diameter (mm)</rdfs:label><rdfs:label xml:lang="el">διάμετρος (mm)</rdfs:label><rdfs:label xml:lang="fr">diamètre (mm)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/AutomobileEngine"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/millimetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Galaxy/averageSpeed">
@@ -7315,12 +7315,12 @@
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilometrePerSecond"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/AutomobileEngine/height">
             <rdfs:label xml:lang="pt">altura (mm)</rdfs:label><rdfs:label xml:lang="ja">身長 (mm)</rdfs:label><rdfs:label xml:lang="nl">hoogte (mm)</rdfs:label><rdfs:label xml:lang="de">Höhe (mm)</rdfs:label><rdfs:label xml:lang="sl">višina (mm)</rdfs:label><rdfs:label xml:lang="en">height (mm)</rdfs:label><rdfs:label xml:lang="el">ύψος (mm)</rdfs:label><rdfs:label xml:lang="fr">hauteur (mm)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/AutomobileEngine"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/millimetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Spacecraft/apoapsis">
             <rdfs:label xml:lang="en">apoapsis (km)</rdfs:label><rdfs:label xml:lang="de">Apoapsisdistanz (km)</rdfs:label><rdfs:label xml:lang="el">απόαψης (km)</rdfs:label><rdfs:label xml:lang="sr">апоапсис (km)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Spacecraft"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Planet/averageSpeed">
@@ -7330,57 +7330,57 @@
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilometrePerSecond"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/SpaceMission/missionDuration">
             <rdfs:label xml:lang="en">mission duration (μ)</rdfs:label><rdfs:label xml:lang="de">Missionsdauer (μ)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/SpaceMission"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/day"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Person/weight">
             <rdfs:label xml:lang="pt">peso (kg)</rdfs:label><rdfs:label xml:lang="ja">体重 (kg)</rdfs:label><rdfs:label xml:lang="nl">gewicht (kg)</rdfs:label><rdfs:label xml:lang="de">Gewicht (kg)</rdfs:label><rdfs:label xml:lang="en">weight (kg)</rdfs:label><rdfs:label xml:lang="el">βάρος (kg)</rdfs:label><rdfs:label xml:lang="sr">тежина (kg)</rdfs:label><rdfs:label xml:lang="fr">poids (kg)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Person"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilogram"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/LunarCrater/diameter">
             <rdfs:label xml:lang="nl">diameter (km)</rdfs:label><rdfs:label xml:lang="de">Durchmesser (km)</rdfs:label><rdfs:label xml:lang="en">diameter (km)</rdfs:label><rdfs:label xml:lang="el">διάμετρος (km)</rdfs:label><rdfs:label xml:lang="fr">diamètre (km)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/LunarCrater"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Weapon/weight">
             <rdfs:label xml:lang="pt">peso (kg)</rdfs:label><rdfs:label xml:lang="ja">体重 (kg)</rdfs:label><rdfs:label xml:lang="nl">gewicht (kg)</rdfs:label><rdfs:label xml:lang="de">Gewicht (kg)</rdfs:label><rdfs:label xml:lang="en">weight (kg)</rdfs:label><rdfs:label xml:lang="el">βάρος (kg)</rdfs:label><rdfs:label xml:lang="sr">тежина (kg)</rdfs:label><rdfs:label xml:lang="fr">poids (kg)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Weapon"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilogram"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/AutomobileEngine/acceleration">
             <rdfs:label xml:lang="de">Beschleunigung (s)</rdfs:label><rdfs:label xml:lang="en">acceleration (s)</rdfs:label><rdfs:label xml:lang="el">επιτάχυνση (s)</rdfs:label><rdfs:label xml:lang="sr">убрзање (s)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/AutomobileEngine"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/second"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Planet/surfaceArea">
             <rdfs:label xml:lang="en">surface area (km2)</rdfs:label><rdfs:label xml:lang="de">Oberfläche (km2)</rdfs:label><rdfs:label xml:lang="el">έκταση (km2)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Planet"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/squareKilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Planet/density">
             <rdfs:label xml:lang="pt">densidade (μ3)</rdfs:label><rdfs:label xml:lang="ja">密度 (μ3)</rdfs:label><rdfs:label xml:lang="de">Dichte (μ3)</rdfs:label><rdfs:label xml:lang="en">density (μ3)</rdfs:label><rdfs:label xml:lang="it">densità (μ3)</rdfs:label><rdfs:label xml:lang="el">πυκνότητα (μ3)</rdfs:label><rdfs:label xml:lang="fr">densité (μ3)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Planet"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilogramPerCubicMetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Galaxy/mass">
             <rdfs:label xml:lang="en">mass (kg)</rdfs:label><rdfs:label xml:lang="de">Masse (kg)</rdfs:label><rdfs:label xml:lang="el">μάζα (kg)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Galaxy"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilogram"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/SpaceShuttle/distance">
             <rdfs:label xml:lang="en">distance (km)</rdfs:label><rdfs:label xml:lang="de">Entfernung (km)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/SpaceShuttle"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Person/height">
             <rdfs:label xml:lang="pt">altura (cm)</rdfs:label><rdfs:label xml:lang="ja">身長 (cm)</rdfs:label><rdfs:label xml:lang="nl">hoogte (cm)</rdfs:label><rdfs:label xml:lang="de">Höhe (cm)</rdfs:label><rdfs:label xml:lang="sl">višina (cm)</rdfs:label><rdfs:label xml:lang="en">height (cm)</rdfs:label><rdfs:label xml:lang="el">ύψος (cm)</rdfs:label><rdfs:label xml:lang="fr">hauteur (cm)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Person"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/centimetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Lake/shoreLength">
             <rdfs:label xml:lang="en">shore length (km)</rdfs:label><rdfs:label xml:lang="de">Uferlänge (km)</rdfs:label><rdfs:label xml:lang="el">μήκος_όχθης (km)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Lake"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/PopulatedPlace/area">
@@ -7390,37 +7390,37 @@
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/squareKilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Building/floorArea">
             <rdfs:label xml:lang="en">floor area (m2)</rdfs:label><rdfs:label xml:lang="nl">vloeroppervlak (m2)</rdfs:label><rdfs:label xml:lang="el">περιοχή ορόφων (m2)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Building"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/squareMetre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/GrandPrix/distance">
             <rdfs:label xml:lang="en">distance (km)</rdfs:label><rdfs:label xml:lang="de">Entfernung (km)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/GrandPrix"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Lake/areaOfCatchment">
             <rdfs:label xml:lang="en">area of catchment (km2)</rdfs:label><rdfs:label xml:lang="de">Einzugsgebiet (km2)</rdfs:label><rdfs:label xml:lang="el">λίμνη (km2)</rdfs:label><rdfs:label xml:lang="sr">подручје слива (km2)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Lake"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/squareKilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Spacecraft/dryCargo">
             <rdfs:label xml:lang="en">dry cargo (kg)</rdfs:label><rdfs:label xml:lang="de">Trockenfracht (kg)</rdfs:label><rdfs:label xml:lang="nl">droge last (kg)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Spacecraft"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/kilogram"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/SpaceMission/stationEvaDuration">
             <rdfs:label xml:lang="en">station EVA duration (ω)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/SpaceMission"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/hour"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Planet/volume">
             <rdfs:label xml:lang="nl">volume (km3)</rdfs:label><rdfs:label xml:lang="de">Volumen (km3)</rdfs:label><rdfs:label xml:lang="en">volume (km3)</rdfs:label><rdfs:label xml:lang="el">όγκος (km3)</rdfs:label><rdfs:label xml:lang="sr">запремина (km3)</rdfs:label><rdfs:label xml:lang="fr">volume (km3)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Planet"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/cubicKilometre"/>
         </owl:DatatypeProperty><owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/Spacecraft/port1DockedTime">
             <rdfs:label xml:lang="en">port1 docked time (μ)</rdfs:label>
-            
+
             <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Spacecraft"/>
             <rdfs:range rdf:resource="http://dbpedia.org/datatype/day"/>
         </owl:DatatypeProperty>

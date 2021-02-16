@@ -1,8 +1,8 @@
 {
-    "body": "", 
+    "body": "",
     "headers": {
-        "Content-Type": "application/rdf+xml; qs=0.95", 
+        "Content-Type": "application/rdf+xml; qs=0.95",
         "Location": "http://dbpedia.org/data/End_of_the_Line_(1987_film).xml"
-    }, 
+    },
     "code": 303
 }
