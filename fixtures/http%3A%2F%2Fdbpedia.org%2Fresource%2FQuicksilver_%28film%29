@@ -1,8 +1,8 @@
 {
-    "body": "", 
+    "body": "",
     "headers": {
-        "Content-Type": "application/rdf+xml; qs=0.95", 
+        "Content-Type": "application/rdf+xml; qs=0.95",
         "Location": "http://dbpedia.org/data/Quicksilver_(film).xml"
-    }, 
+    },
     "code": 303
 }
