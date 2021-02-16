@@ -131,7 +131,11 @@ def update_thing(iri, quick=False):
 
     rdf_string = graph.serialize(format="turtle").decode("utf-8")
     mongo.db.things.insert(
-        {"_id": iri, "graph": rdf_string, "updated": datetime.datetime.utcnow()}
+        {
+            "_id": iri,
+            "graph": rdf_string,
+            "updated": datetime.datetime.utcnow(),
+        }
     )
 
     if quick:
