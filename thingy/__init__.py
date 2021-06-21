@@ -77,17 +77,17 @@ def add_labels_for_linked_things(iri, graph):
 
     predicates = [URIRef("http://dbpedia.org/ontology/starring")]
     subjects = sum(
-        [
+        (
             list(graph.subjects(object=thing, predicate=predicate))
             for predicate in predicates
-        ],
+        ),
         [],
     )
     objects = sum(
-        [
+        (
             list(graph.objects(subject=thing, predicate=predicate))
             for predicate in predicates
-        ],
+        ),
         [],
     )
 
