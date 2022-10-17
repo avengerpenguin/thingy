@@ -1,0 +1,11 @@
+/celerybeat-schedule
+*~
+*.deb
+*.pyc
+/venv
+/venv-tools
+/todo
+/.env
+/.idea
+/.git
+/makefile

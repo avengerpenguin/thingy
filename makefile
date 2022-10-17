@@ -1,70 +1,69 @@
-.PHONY: clean test
+.PHONY: clean deb default deploy
 
-ORG=ross
-NAME=thingy
-INSTALLDIR=/opt/${ORG}/${NAME}
+################
+# Build Info   #
+################
 
-VENV := venv
-PYTHON := $(VENV)/bin/python
-PIP := $(VENV)/bin/pip
-PYTEST := $(VENV)/bin/py.test
-PEP8 := $(VENV)/bin/pep8
-HONCHO := $(VENV)/bin/honcho
-COVERAGE := $(VENV)/bin/coverage
+NAME := thingy
+VERSION := $(shell python setup.py --version)
 
-PYSRC := $(shell find thingy tests -iname '*.py')
+PYSRC := $(shell find thingy)
 TARGET := $(PWD)/target
 
-GEMBIN := ${HOME}/.gem/ruby/$(shell ruby -e 'puts RUBY_VERSION')/bin
-FPM := $(GEMBIN)/fpm
-FOREMAN := $(GEMBIN)/foreman
+PYTHON_VERSION = 2
 
-all: $(TARGET)/pep8.errors $(TARGET)/test-results.xml
+###############
+# Boilerplate #
+###############
+
+default: test
 
 clean:
-	rm -rf venv results node_modules target .coverage htmlcov
+	rm -rf $(TARGET)
 
 $(TARGET):
 	mkdir -p $(TARGET)
 
-$(VENV)/deps.touch: $(PIP) requirements.txt
-	$(PIP) install -r requirements.txt
-	touch $(VENV)/deps.touch
 
-$(VENV)/bin/%: $(PIP)
-	$(PIP) install $*
+################
+# Code Quality #
+################
 
-$(VENV)/bin/py.test: $(PIP)
-	$(PIP) install pytest pytest-cov pytest-xdist testypie
+$(TARGET)/pep8.errors: $(TARGET) $(PYSRC)
+	pep8 --exclude="venv" . | tee $(TARGET)/pep8.errors || true
 
-$(PYTHON) $(PIP):
-	virtualenv -p python3 venv
 
-$(TARGET)/pep8.errors: $(TARGET) $(PEP8) $(PYSRC)
-	$(PEP8) --exclude=venv . | tee $(TARGET)/pep8.errors || true
+####################
+# Building the deb #
+####################
 
-$(TARGET)/test-results.xml: $(PIP) $(VENV)/deps.touch $(PYSRC) $(PYTEST) $(HONCHO) $(COVERAGE)
-	export PATH=$(VENV)/bin:$(PATH) && \
-		$(HONCHO) --procfile Procfile.test --env .env.test start
+debNAME := $(NAME)_$(VERSION)_amd64.deb
 
-heroku: $(TARGET)/unit-tests.xml
-	pip install django-herokuapp
-	$(PYTHON) manage.py heroku_audit
-	git push heroku master
-	heroku run python manage.py makemigrations
+$(TARGET)/$(DEBNAME): $(TARGET) setup.py $(PYSRC)
+# Check if we're running Debian...
+ifeq ($(wildcard /etc/debian_version),)
+	docker stop $(NAME) || true
+	docker rm $(NAME) || true
+	docker build -t $(NAME) .
+	chmod 777 $(TARGET)
+	docker run -v $(TARGET):/target -w /target $(NAME) cp -r /app/target/$(DEBNAME) /target
+else
+	rm -rf $(TARGET)/venv
+	virtualenv -p python$(PYTHON_VERSION) $(TARGET)/venv
+	$(TARGET)/venv/bin/pip install -r requirements.txt
+	$(TARGET)/venv/bin/python setup.py install
+	virtualenv --relocatable $(TARGET)/venv
+	fpm -s dir -t deb -n $(NAME) --force \
+		--package $(TARGET)/$(DEBNAME) --version $(VERSION) --iteration $(RELEASE_VER) \
+		$(TARGET)/venv/{bin,lib,src,include}=/opt/$(NAME)
+endif
 
-migrate:
-	heroku run python manage.py migrate
+deb: $(TARGET)/$(DEBNAME)
 
-secret: heroku
-	heroku config:set SECRET_KEY=`openssl rand -base64 32`
-	heroku config:set PYTHONHASHSEED=random
 
-$(GEMBIN)/%:
-	gem install $* --user-install
+##############
+# Deployment #
+##############
 
-deb: $(TARGET) $(PIP) requirements.txt $(PYSRC) Dockerfile
-	sudo docker build -t $(ORG)/$(NAME) .
-	sudo docker stop $(NAME) || true
-	sudo docker rm $(NAME) || true
-	sudo docker run -v $(PWD)/dist:/deb -w /deb -u $(shell id -u) $(ORG)/$(NAME) cp /$(NAME)_0.0.0_amd64.deb /deb
+deploy: $(TARGET)/$(DEBNAME)
+	deb-s3 --bucket=ross-deb-repo --codename=jessie upload $(TARGET)/$(DEBNAME)

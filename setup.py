@@ -15,7 +15,7 @@ setup(name='thingy',
       author_email = 'ross.fenning@gmail.com',
       packages=['thingy'],
       package_data={
-          'thingy': ['thingy/rules.n3', 'thingy/templates/*']
+          '': ['thingy/rules.n3', 'thingy/templates/*']
       },
       url = 'https://github.com/avengerpenguin/thingy',
       description = 'REST API for things.',
