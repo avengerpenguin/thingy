@@ -47,7 +47,6 @@ def home():
 @app.route("/lookup")
 @flask_rdf
 def find_uri():
-
     iri = request.args["iri"]
 
     entry = mongo.db.things.find_one({"_id": iri})
